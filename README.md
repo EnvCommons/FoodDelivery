@@ -8,6 +8,8 @@ FoodDelivery is a food delivery dispatch optimization environment. An agent mana
 
 The simulation models a 4-hour dinner service period (5:00 PM -- 9:00 PM) with non-homogeneous Poisson order arrivals, Gamma-distributed restaurant preparation times, and lognormal stochastic travel times with time-of-day traffic effects. Scenarios range from calm weekday evenings to holiday peak demand, rainy weather, sudden demand spikes, and understaffed conditions.
 
+**Note**: This is a synthetic environment which was majority AI-generated; we recommend testing it thoroughly before any use in an RL pipeline.
+
 ## Capabilities
 
 - Real-time courier-order matching and assignment under time pressure
