@@ -107,9 +107,7 @@ There are no external API requirements. FoodDelivery works out of the box with t
 
 ## Safety
 
-Agents in FoodDelivery optimize delivery logistics within a fully simulated environment. There are no real-world side effects: no real couriers are dispatched, no real orders are placed, and no real pricing decisions are made.
-
-The surge pricing mechanism introduces an economic optimization component where agents must balance revenue extraction against service quality. While the environment rewards efficient dispatch, the objectives are bounded and the simulation is self-contained.
+Agents in FoodDelivery optimize delivery logistics within a fully simulated environment. The surge pricing mechanism introduces an economic optimization component where agents must balance revenue extraction against service quality. While the environment rewards efficient dispatch, the objectives are bounded and the simulation is self-contained.
 
 ## Citations
 
