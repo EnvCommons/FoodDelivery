@@ -4,7 +4,7 @@
 
 ## Description
 
-FoodDelivery is a hyper-realistic food delivery dispatch optimization environment. An agent manages a fleet of e-bike couriers across a procedurally generated city, making real-time decisions about courier-order matching, order batching, surge pricing, and fleet repositioning under stochastic conditions.
+FoodDelivery is a food delivery dispatch optimization environment. An agent manages a fleet of e-bike couriers across a procedurally generated city, making real-time decisions about courier-order matching, order batching, surge pricing, and fleet repositioning under stochastic conditions.
 
 The simulation models a 4-hour dinner service period (5:00 PM -- 9:00 PM) with non-homogeneous Poisson order arrivals, Gamma-distributed restaurant preparation times, and lognormal stochastic travel times with time-of-day traffic effects. Scenarios range from calm weekday evenings to holiday peak demand, rainy weather, sudden demand spikes, and understaffed conditions.
 
