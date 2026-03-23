@@ -19,7 +19,7 @@ The simulation models a 4-hour dinner service period (5:00 PM -- 9:00 PM) with n
 
 ## Compute Requirements
 
-Agents in FoodDelivery are given a sandbox with 1GB of RAM and 0.5 CPUs. The simulation is CPU-only with no GPU requirements.
+No additional compute required beyond the environment server.
 
 ## License
 
