@@ -243,12 +243,10 @@ Start by calling get_info(), then call step() repeatedly to run the simulation.
         text = "\n".join(lines)
 
         if result.finished:
-            final_reward = self.sim.get_normalized_reward()
             text += (
                 f"\n\n{'='*40}\n"
                 f"SIMULATION COMPLETE\n"
                 f"{'='*40}\n"
-                f"Final normalized reward: {final_reward:.4f}\n"
                 f"Total orders: {result.total_orders_seen}\n"
                 f"Delivered: {result.total_delivered} "
                 f"({result.total_delivered/max(1,result.total_orders_seen)*100:.1f}%)\n"
@@ -257,18 +255,12 @@ Start by calling get_info(), then call step() repeatedly to run the simulation.
                 f"Expired: {result.total_expired}\n"
                 f"Avg delivery time: {result.avg_delivery_time:.1f} min\n"
             )
-            return ToolOutput(
-                metadata=result.model_dump(),
-                blocks=[TextBlock(text=text)],
-                reward=final_reward,
-                finished=True,
-            )
 
         return ToolOutput(
             metadata=result.model_dump(),
             blocks=[TextBlock(text=text)],
             reward=result.step_reward,
-            finished=False,
+            finished=result.finished,
         )
 
     @classmethod
