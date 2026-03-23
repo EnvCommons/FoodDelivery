@@ -164,31 +164,8 @@ The simulation runs for {sc.duration_minutes} minutes (5:00 PM to {self.sim._ste
    - `repositions`: List of {{"courier_id": int, "zone_id": int}} -- send idle couriers to a target zone
    All fields optional. Empty step() advances time with no actions.
 
-## Reward Structure
-- +1.0 per order delivered on time (within promised delivery window)
-- +0.3 per order delivered slightly late (within 10 min past promise)
-- -0.5 per order delivered very late (>10 min past promise)
-- -1.5 per order that expires (unassigned >20 min or total >60 min)
-- Small bonus for surge pricing revenue
-- Final score = cumulative reward / total orders seen
-
-## Key Mechanics
-- Couriers: e-bike, ~18 km/h, Manhattan distance, stochastic travel times
-- Restaurants: fast food (~8 min prep), standard (~18 min), premium (~25 min)
-- Orders expire if unassigned for >20 min or undelivered for >60 min
-- Couriers can carry up to 2 orders (batching)
-- Surge pricing: increases revenue but reduces demand (10% drop per 1.0x above base)
-- Only IDLE couriers can be assigned orders or repositioned
-- Weather: {weather_info}
-- Demand multiplier: {sc.demand_multiplier}x{special_notes}
-
-## Strategy Tips
-- Call get_info() first to understand city layout
-- Each step() returns pending orders and idle couriers -- assign orders promptly
-- Batch nearby orders to the same courier for efficiency
-- Reposition idle couriers to high-demand zones before peak (6:30-7:30 PM)
-- Use surge pricing in overwhelmed zones to manage demand
-- An order's promised_delivery_time tells you the deadline
+Weather: {weather_info}
+Demand multiplier: {sc.demand_multiplier}x{special_notes}
 
 Start by calling get_info(), then call step() repeatedly to run the simulation.
 """
